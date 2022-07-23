@@ -1,20 +1,15 @@
+import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppStyles } from './src/theme/styles';
+import GoalApp from './src/components/goal/goal-app';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Keep it up baby!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+        <StatusBar style='light' />
+        <View style={AppStyles.container}>
+            <GoalApp />
+        </View>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
